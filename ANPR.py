@@ -2,9 +2,11 @@ import mysql.connector
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import db_config
+
 
 # Connect to MySQL
-conn = mysql.connector.connect(host='localhost', user='root', password='Sarthak@12', database='ANPR_Comparison')
+conn = db_config.get_db_connection()
 cursor = conn.cursor()
 
 # Query Data
